@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/botonera_new/static/css/main.d1b05096.chunk.css",
+    "main.js": "/botonera_new/static/js/main.68a8d194.chunk.js",
+    "main.js.map": "/botonera_new/static/js/main.68a8d194.chunk.js.map",
+    "runtime-main.js": "/botonera_new/static/js/runtime-main.09a57d8d.js",
+    "runtime-main.js.map": "/botonera_new/static/js/runtime-main.09a57d8d.js.map",
+    "static/js/2.39b9ec56.chunk.js": "/botonera_new/static/js/2.39b9ec56.chunk.js",
+    "static/js/2.39b9ec56.chunk.js.map": "/botonera_new/static/js/2.39b9ec56.chunk.js.map",
+    "index.html": "/botonera_new/index.html",
+    "precache-manifest.eaac85b4f3608cf21a9d36ed9841a07f.js": "/botonera_new/precache-manifest.eaac85b4f3608cf21a9d36ed9841a07f.js",
+    "service-worker.js": "/botonera_new/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/botonera_new/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.39b9ec56.chunk.js.LICENSE.txt": "/botonera_new/static/js/2.39b9ec56.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/botonera_new/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09a57d8d.js",
+    "static/js/2.39b9ec56.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.68a8d194.chunk.js"
+  ]
+}
