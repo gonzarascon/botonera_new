@@ -11,7 +11,7 @@ export const breakpoints = {
 };
 
 export const colors = {
-  darkText: Color.rgb(10, 19, 39),
+  darkText: Color.rgb(10, 19, 39).lighten(1.2),
   lightBackground: Color.rgb(255, 244, 241),
   buttons: [
     Color.rgb(72, 144, 243),
