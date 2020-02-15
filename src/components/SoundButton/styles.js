@@ -18,9 +18,11 @@ export const Box = styled.div`
   justify-content: center;
   transition: transform ease-in-out 0.3s;
 
-  &:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+  @media ${breakpoints.mediumDevice} {
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
   }
 `;
 
