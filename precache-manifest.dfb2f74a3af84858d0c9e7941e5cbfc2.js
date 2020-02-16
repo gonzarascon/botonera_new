@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9706f049d4be15a4e450695cff569373",
+    "revision": "2389dddc19db330eb95a3cbe3bcdfd18",
     "url": "/botonera_new/index.html"
   },
   {
