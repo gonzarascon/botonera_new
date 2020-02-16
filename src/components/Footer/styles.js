@@ -20,7 +20,7 @@ export const Title = styled.a`
   align-items: center;
   font-size: ${calculateRem(20)};
   text-decoration: none;
-
+  color: white;
   & svg {
     width: 100%;
     max-width: 25px;
