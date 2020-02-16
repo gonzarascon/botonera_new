@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import _ from "lodash";
 import { colors } from "../../constants";
 import { Wrapper, Box } from "./styles";
@@ -8,43 +8,49 @@ import { SoundButton } from "../../components";
 const audios = [
   {
     label: "A Laburar",
-    src: "./assets/audio/a-laburar.mp3",
+    src: "a-laburar",
+    color: _.sample(colors.buttons),
+    id: 0,
+  },
+  {
+    label: "Balada Showmatch",
+    src: "balada-showmatch",
     color: _.sample(colors.buttons),
     id: 1,
   },
   {
-    label: "Balada Showmatch",
-    src: "./assets/audio/balada-showmatch.mp3",
+    label: "Intelectual",
+    src: "intelectual",
     color: _.sample(colors.buttons),
     id: 2,
   },
   {
-    label: "Intelectual",
-    src: "./assets/audio/intelectual.mp3",
+    label: "Saxo sexy",
+    src: "saxo-sexy",
     color: _.sample(colors.buttons),
     id: 3,
   },
   {
-    label: "Saxo sexy",
-    src: "./assets/audio/saxo-sexy.mp3",
+    label: "Tifonic",
+    src: "titanic-flute",
     color: _.sample(colors.buttons),
     id: 4,
   },
   {
-    label: "Tifonic",
-    src: "./assets/audio/titanic-flute.mp3",
+    label: "Flauta Mii",
+    src: "wii-flute",
     color: _.sample(colors.buttons),
     id: 5,
-  },
-  {
-    label: "Flauta Mii",
-    src: "./assets/audio/wii-flute.mp3",
-    color: _.sample(colors.buttons),
-    id: 6,
   },
 ];
 
 export default function Home() {
+  const [currentPlaying, setCurrentPlaying] = useState(null);
+
+  function handlePlay(playerId) {
+    setCurrentPlaying(playerId);
+  }
+
   return (
     <Wrapper>
       {audios.map(audio => (
@@ -53,6 +59,9 @@ export default function Home() {
           sound={audio.src}
           label={audio.label}
           color={audio.color}
+          playing={_.isEqual(audio.id, currentPlaying) ? true : false}
+          handlePlay={handlePlay}
+          playerId={audio.id}
         />
       ))}
     </Wrapper>

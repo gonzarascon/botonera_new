@@ -15,6 +15,7 @@ export const Wrapper = styled.header`
 
 export const Title = styled.h1`
   font-weight: 700;
+  text-transform: uppercase;
   text-align: center;
-  font-size: ${calculateRem(30)};
+  font-size: ${calculateRem(45)};
 `;

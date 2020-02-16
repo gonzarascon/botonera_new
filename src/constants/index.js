@@ -11,7 +11,7 @@ export const breakpoints = {
 };
 
 export const colors = {
-  darkText: Color.rgb(10, 19, 39).lighten(1.2),
+  darkText: Color.rgb(10, 19, 39).lighten(0.25),
   lightBackground: Color.rgb(255, 244, 241),
   buttons: [
     Color.rgb(72, 144, 243),
@@ -26,7 +26,7 @@ export const Utils = {
   calculateRem: size => `${size / 16}rem`,
   customBreakpoint: min => `(min-width: ${min / 16}em)`,
   neumorphism: color => css`
-    border-radius: 37px;
+    border-radius: 20px;
     background: ${color.hsl().string()};
     box-shadow: 8px 8px 25px
         ${color

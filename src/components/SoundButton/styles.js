@@ -8,8 +8,8 @@ const buttonColor = _.sample(colors.buttons);
 console.log("buttonColor", buttonColor);
 
 export const Box = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 75px;
   color: ${props =>
     props.color.isDark() ? "white" : readColor(colors.darkText)};
   ${props => neumorphism(props.color)};
@@ -23,6 +23,27 @@ export const Box = styled.div`
       transform: scale(1.05);
       cursor: pointer;
     }
+    width: 150px;
+    height: 150px;
+  }
+
+  svg {
+    width: 50%;
+    height: 50%;
+
+    circle {
+      stroke: ${props =>
+        props.color.isDark() ? "white" : readColor(colors.darkText)};
+    }
+  }
+
+  .pause-icon {
+    max-height: 50px;
+
+    path {
+      fill: ${props =>
+        props.color.isDark() ? "white" : readColor(colors.darkText)};
+    }
   }
 `;
 
@@ -30,7 +51,10 @@ export const Label = styled.span`
   font-size: ${calculateRem(20)};
   line-height: ${calculateRem(20)};
   text-transform: uppercase;
-  width: 100%;
   padding: 15px;
   text-align: center;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
 `;
