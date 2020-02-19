@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import _ from "lodash";
 import SVG from "react-inlinesvg";
 import PropTypes from "prop-types";
 import ReactHowler from "react-howler";
@@ -6,6 +7,7 @@ import { Box, Label } from "./styles";
 
 function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   const [loading, setLoading] = useState(true);
+  const playerRef = useRef();
 
   function renderLabel() {
     if (playing) {
@@ -28,6 +30,10 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
         playing={playing}
         onLoad={() => setLoading(false)}
         onEnd={() => handlePlay(null)}
+        onPause={() =>
+          !_.isEqual(playerRef.current, null) ? playerRef.current.seek(0) : null
+        }
+        ref={playerRef}
       />
 
       {loading ? (

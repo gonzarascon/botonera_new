@@ -50,6 +50,18 @@ const audios = [
     color: _.sample(colors.buttons),
     id: 7,
   },
+  {
+    label: "Me cago en la puta",
+    src: "me-cago-pepe",
+    color: _.sample(colors.buttons),
+    id: 8,
+  },
+  {
+    label: "Ponele voluntad",
+    src: "ponele-voluntad",
+    color: _.sample(colors.buttons),
+    id: 9,
+  },
 ];
 
 export default audios;
