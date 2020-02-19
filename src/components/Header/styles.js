@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { breakpoints, colors, Utils } from "../../constants";
+import { Utils } from "../../constants";
 
-const { readColor, calculateRem } = Utils;
+const { calculateRem } = Utils;
 
 export const Wrapper = styled.header`
   width: 100%;
+  height: 250px;
   display: flex;
-  height: 150px;
+  flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
@@ -18,4 +19,24 @@ export const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
   font-size: ${calculateRem(45)};
+  width: 100%;
+`;
+
+export const SearchInput = styled.input`
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  padding: 10px;
+  background-color: transparent;
+  font-size: ${calculateRem(20)};
+  font-weight: lighter;
+  margin: 20px auto;
+  color: white;
+
+  max-width: 500px;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
 `;

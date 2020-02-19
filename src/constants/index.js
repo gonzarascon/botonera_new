@@ -18,6 +18,11 @@ export const colors = {
     Color.rgb(87, 245, 138),
     Color.rgb(180, 65, 245),
     Color.rgb(245, 67, 67),
+    Color.rgb(236, 195, 11),
+    Color.rgb(243, 119, 72),
+    Color.rgb(203, 186, 237),
+    Color.rgb(3, 252, 186),
+    Color.rgb(228, 255, 26),
   ],
 };
 

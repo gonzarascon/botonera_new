@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import _ from "lodash";
 import { breakpoints, colors, Utils } from "../../constants";
 
 const { readColor, neumorphism, calculateRem } = Utils;
-
-const buttonColor = _.sample(colors.buttons);
-console.log("buttonColor", buttonColor);
 
 export const Box = styled.div`
   width: 100%;
@@ -18,12 +14,11 @@ export const Box = styled.div`
   justify-content: center;
   transition: transform ease-in-out 0.3s;
 
+  @media ${breakpoints.smallDevice} {
+    height: 100px;
+  }
+
   @media ${breakpoints.mediumDevice} {
-    &:hover {
-      transform: scale(1.05);
-      cursor: pointer;
-    }
-    width: 150px;
     height: 150px;
   }
 
@@ -43,6 +38,13 @@ export const Box = styled.div`
     path {
       fill: ${props =>
         props.color.isDark() ? "white" : readColor(colors.darkText)};
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
     }
   }
 `;

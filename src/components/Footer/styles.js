@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { breakpoints, colors, Utils } from "../../constants";
+import { breakpoints, Utils } from "../../constants";
 
-const { readColor, calculateRem } = Utils;
+const { calculateRem } = Utils;
 
 export const Wrapper = styled.footer`
   width: 100%;

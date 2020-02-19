@@ -44,6 +44,12 @@ const audios = [
     color: _.sample(colors.buttons),
     id: 6,
   },
+  {
+    label: "Loros Barranqueros",
+    src: "loros-barranqueros",
+    color: _.sample(colors.buttons),
+    id: 7,
+  },
 ];
 
 export default audios;
