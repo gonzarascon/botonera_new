@@ -43,6 +43,10 @@ export default function Home() {
 
   useEffect(() => {
     updateFilter();
+
+    if (!_.isEqual(currentPlaying, null)) {
+      setCurrentPlaying(null);
+    }
   }, [search, updateFilter]);
 
   useEffect(() => {
