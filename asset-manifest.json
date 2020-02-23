@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/botonera_new/static/js/main.b5c32981.chunk.js",
-    "main.js.map": "/botonera_new/static/js/main.b5c32981.chunk.js.map",
+    "main.js": "/botonera_new/static/js/main.7658a059.chunk.js",
+    "main.js.map": "/botonera_new/static/js/main.7658a059.chunk.js.map",
     "runtime-main.js": "/botonera_new/static/js/runtime-main.09a57d8d.js",
     "runtime-main.js.map": "/botonera_new/static/js/runtime-main.09a57d8d.js.map",
-    "static/js/2.8c35a0ea.chunk.js": "/botonera_new/static/js/2.8c35a0ea.chunk.js",
-    "static/js/2.8c35a0ea.chunk.js.map": "/botonera_new/static/js/2.8c35a0ea.chunk.js.map",
+    "static/js/2.e13dba2f.chunk.js": "/botonera_new/static/js/2.e13dba2f.chunk.js",
+    "static/js/2.e13dba2f.chunk.js.map": "/botonera_new/static/js/2.e13dba2f.chunk.js.map",
     "index.html": "/botonera_new/index.html",
-    "precache-manifest.454075095423e4e20c55fbb9b5ee0094.js": "/botonera_new/precache-manifest.454075095423e4e20c55fbb9b5ee0094.js",
+    "precache-manifest.82dc2c4431ba2f0c590d0c49ef812d03.js": "/botonera_new/precache-manifest.82dc2c4431ba2f0c590d0c49ef812d03.js",
     "service-worker.js": "/botonera_new/service-worker.js",
-    "static/js/2.8c35a0ea.chunk.js.LICENSE.txt": "/botonera_new/static/js/2.8c35a0ea.chunk.js.LICENSE.txt"
+    "static/js/2.e13dba2f.chunk.js.LICENSE.txt": "/botonera_new/static/js/2.e13dba2f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09a57d8d.js",
-    "static/js/2.8c35a0ea.chunk.js",
-    "static/js/main.b5c32981.chunk.js"
+    "static/js/2.e13dba2f.chunk.js",
+    "static/js/main.7658a059.chunk.js"
   ]
 }
