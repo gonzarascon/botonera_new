@@ -24,6 +24,8 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   async function shareFile() {
     const files = [file];
 
+    console.log("Without canShare");
+
     navigator
       .share({
         title: sound.toUpperCase(),
