@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import _ from "lodash";
 import SVG from "react-inlinesvg";
 import PropTypes from "prop-types";
@@ -7,18 +7,29 @@ import { Box, Label, Play, Share } from "./styles";
 
 function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   const [loading, setLoading] = useState(true);
+  const [file, setFile] = useState(null);
   const playerRef = useRef();
 
-  async function shareFile() {
-    const file = await fetch(`/assets/audio/${sound}.mp3`).then(response =>
+  const getFile = useCallback(async () => {
+    const fileBlob = await fetch(`/assets/audio/${sound}.mp3`).then(response =>
       response.blob()
     );
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+
+    setFile(fileBlob);
+  }, [sound]);
+
+  useEffect(() => {
+    getFile();
+  }, []);
+
+  async function shareFile() {
+    const files = [file];
+    if (navigator.canShare && navigator.canShare({ files })) {
       navigator
         .share({
-          title: sound.toUppercase,
+          title: sound.toUpperCase(),
           text: "Ey encontré esto en la botonera",
-          file: [file],
+          file: files,
         })
         .then(() => console.log("Compartido exitosamente"))
         .catch(e => console.error("No se pudo compartir", e));

@@ -6,6 +6,7 @@ const { readColor, neumorphism, calculateRem } = Utils;
 export const Box = styled.div`
   width: 100%;
   height: 75px;
+  padding: 10px;
   color: ${props =>
     props.color.isDark() ? "white" : readColor(colors.darkText)};
   ${props => neumorphism(props.color)};
