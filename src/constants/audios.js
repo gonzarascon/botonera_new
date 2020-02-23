@@ -68,6 +68,12 @@ const audios = [
     color: _.sample(colors.buttons),
     id: 10,
   },
+  {
+    label: "Agora sim entendo",
+    src: "agora-sim-entendo",
+    color: _.sample(colors.buttons),
+    id: 11,
+  },
 ];
 
 export default audios;
