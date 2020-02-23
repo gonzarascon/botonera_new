@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/botonera_new/static/js/main.7acedbac.chunk.js",
-    "main.js.map": "/botonera_new/static/js/main.7acedbac.chunk.js.map",
+    "main.js": "/botonera_new/static/js/main.ac0e527a.chunk.js",
+    "main.js.map": "/botonera_new/static/js/main.ac0e527a.chunk.js.map",
     "runtime-main.js": "/botonera_new/static/js/runtime-main.09a57d8d.js",
     "runtime-main.js.map": "/botonera_new/static/js/runtime-main.09a57d8d.js.map",
     "static/js/2.8c35a0ea.chunk.js": "/botonera_new/static/js/2.8c35a0ea.chunk.js",
     "static/js/2.8c35a0ea.chunk.js.map": "/botonera_new/static/js/2.8c35a0ea.chunk.js.map",
     "index.html": "/botonera_new/index.html",
-    "precache-manifest.bb0c2fdd67a4141c67fe1917ebc9acad.js": "/botonera_new/precache-manifest.bb0c2fdd67a4141c67fe1917ebc9acad.js",
+    "precache-manifest.8f615bbdd3603bd551e142a07589de7b.js": "/botonera_new/precache-manifest.8f615bbdd3603bd551e142a07589de7b.js",
     "service-worker.js": "/botonera_new/service-worker.js",
     "static/js/2.8c35a0ea.chunk.js.LICENSE.txt": "/botonera_new/static/js/2.8c35a0ea.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09a57d8d.js",
     "static/js/2.8c35a0ea.chunk.js",
-    "static/js/main.7acedbac.chunk.js"
+    "static/js/main.ac0e527a.chunk.js"
   ]
 }
