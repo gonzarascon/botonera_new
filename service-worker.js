@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/botonera_new/precache-manifest.82dc2c4431ba2f0c590d0c49ef812d03.js"
+  "/botonera_new/precache-manifest.ae06945a07ef6497577de6168cd8d4d7.js"
 );
 
 self.addEventListener('message', (event) => {
