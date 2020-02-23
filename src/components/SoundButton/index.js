@@ -34,6 +34,7 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
           !_.isEqual(playerRef.current, null) ? playerRef.current.seek(0) : null
         }
         ref={playerRef}
+        html5={true}
       />
 
       {loading ? (

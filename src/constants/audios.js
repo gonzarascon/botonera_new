@@ -62,6 +62,12 @@ const audios = [
     color: _.sample(colors.buttons),
     id: 9,
   },
+  {
+    label: "Agachate y conocelo",
+    src: "agachate-conocelo",
+    color: _.sample(colors.buttons),
+    id: 10,
+  },
 ];
 
 export default audios;
