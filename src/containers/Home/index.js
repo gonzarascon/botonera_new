@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
+import SVG from "react-inlinesvg";
 import _ from "lodash";
-import { Wrapper, OopsMessage } from "./styles";
+import { Wrapper, OopsMessage, ShareButton, Share } from "./styles";
 
 import audios from "../../constants/audios";
 
@@ -57,8 +58,26 @@ export default function Home() {
     setCurrentPlaying(playerId);
   }
 
+  function shareBotonera() {
+    if (navigator.share) {
+      navigator.share({
+        title: "Botonera de memes",
+        text: "Ey encontré esta botonera",
+        url: "https://gonzarascon.github.io/botonera_new",
+      });
+    }
+  }
+
   return (
     <Wrapper>
+      {navigator.share && (
+        <ShareButton onClick={() => shareBotonera()}>
+          <span>Compartí la botonera</span>
+          <Share>
+            <SVG src="./assets/icons/share.svg" title="Compartir" />
+          </Share>
+        </ShareButton>
+      )}
       {audioList.map(audio => (
         <SoundButton
           key={audio.id}

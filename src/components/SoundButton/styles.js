@@ -10,9 +10,9 @@ export const Box = styled.div`
   color: ${props =>
     props.color.isDark() ? "white" : readColor(colors.darkText)};
   ${props => neumorphism(props.color)};
-  display: grid;
 
-  grid-template-columns: 70% 1fr 1fr;
+  display: grid;
+  grid-template-columns: 70% 1fr;
   grid-template-rows: 1fr;
 
   place-content: center;
@@ -27,7 +27,7 @@ export const Box = styled.div`
   }
 
   @media ${breakpoints.mediumDevice} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 80% 1fr;
     padding: 15px;
     height: 150px;
@@ -45,12 +45,10 @@ export const Box = styled.div`
     }
   }
 
-  .pause-icon {
-    max-height: 50px;
-
-    path {
-      fill: ${props =>
-        props.color.isDark() ? "white" : readColor(colors.darkText)};
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
     }
   }
 `;
@@ -85,62 +83,13 @@ export const Play = styled.span`
         props.color.isDark() ? "white" : readColor(colors.darkText)};
     }
   }
-      align-self: center;
-    justify-self: center;
-
-    ${props =>
-      props.full &&
-      css`
-        grid-column: 2/-1;
-      `}
-
-  @media ${breakpoints.mediumDevice} {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-justify-self: start;
-    ${props =>
-      props.full &&
-      css`
-        grid-column: 1/-1;
-        justify-self: center;
-      `}
-
-    
-
-    svg {
-      width: 30px;
-      height: 30px;
-      margin: 0 auto;
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-    }
-  }
-`;
-
-export const Share = styled.span`
-  svg {
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
-
-    path {
-      fill: ${props =>
-        props.color.isDark() ? "white" : readColor(colors.darkText)};
-    }
-  }
-
   align-self: center;
   justify-self: center;
 
   @media ${breakpoints.mediumDevice} {
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
     grid-row: 2 / 3;
-    justify-self: end;
+    justify-self: center;
 
     svg {
       width: 30px;

@@ -7,50 +7,10 @@ import { Box, Label, Play, Share } from "./styles";
 
 function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   const [loading, setLoading] = useState(true);
-  const [file, setFile] = useState(null);
   const playerRef = useRef();
 
-  const getFile = useCallback(async () => {
-    const fileBlob = await fetch(`assets/audio/${sound}.ogg`).then(response =>
-      response.blob()
-    );
-    setFile(fileBlob);
-  }, [sound]);
-
-  useEffect(() => {
-    getFile();
-  }, []);
-
-  async function shareFile() {
-    const files = [file];
-
-    console.log("Without canShare");
-
-    navigator
-      .share({
-        title: sound.toUpperCase(),
-        text: "Ey encontré esto en la botonera",
-        file: files,
-      })
-      .then(() => console.log("Compartido exitosamente"))
-      .catch(e => console.error("No se pudo compartir", e));
-  }
-
-  function renderIfShareAvailable() {
-    if (navigator.share) {
-      return (
-        <Share color={color} onClick={() => shareFile()}>
-          <SVG src="./assets/icons/share.svg" title="Share" />
-        </Share>
-      );
-    } else {
-      console.log("Web Share Api no se soporta en tu dispositivo");
-      return null;
-    }
-  }
-
   return (
-    <Box color={color}>
+    <Box color={color} onClick={() => handlePlay(playing ? null : playerId)}>
       <ReactHowler
         src={[`./assets/audio/${sound}.mp3`, `./assets/audio/${sound}.ogg`]}
         playing={playing}
@@ -68,18 +28,12 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
         <Label>{label}</Label>
       )}
 
-      <Play
-        color={color}
-        onClick={() => handlePlay(playing ? null : playerId)}
-        full={navigator.share ? false : true}
-      >
+      <Play color={color}>
         <SVG
           src={`./assets/icons/${playing ? "pause" : "play"}.svg`}
           title="Play / Pause"
         />
       </Play>
-
-      {renderIfShareAvailable()}
     </Box>
   );
 }
