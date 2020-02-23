@@ -11,10 +11,9 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   const playerRef = useRef();
 
   const getFile = useCallback(async () => {
-    const fileBlob = await fetch(`/assets/audio/${sound}.ogg`).then(response =>
+    const fileBlob = await fetch(`assets/audio/${sound}.ogg`).then(response =>
       response.blob()
     );
-
     setFile(fileBlob);
   }, [sound]);
 
