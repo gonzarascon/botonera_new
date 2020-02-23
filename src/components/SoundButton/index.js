@@ -18,7 +18,7 @@ function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
         .share({
           title: sound.toUppercase,
           text: "Ey encontré esto en la botonera",
-          file,
+          file: [file],
         })
         .then(() => console.log("Compartido exitosamente"))
         .catch(e => console.error("No se pudo compartir", e));
