@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a91f8e9fafa2d39c24a7d0dc68878475",
+    "revision": "60508940951657fbc4d012a2338dcea8",
     "url": "/botonera_new/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/botonera_new/static/js/2.8c35a0ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bef42d503c39b852adab",
-    "url": "/botonera_new/static/js/main.b54c4bed.chunk.js"
+    "revision": "b7fa7aed3901da39fc6f",
+    "url": "/botonera_new/static/js/main.c07132aa.chunk.js"
   },
   {
     "revision": "6a4f71d40b0c7ec5e127",
