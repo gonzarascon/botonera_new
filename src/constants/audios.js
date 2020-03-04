@@ -74,6 +74,18 @@ const audios = [
     color: _.sample(colors.buttons),
     id: 11,
   },
+  {
+    label: "Pelotudo de mierda",
+    src: "pelotudo_de_mierda",
+    color: _.sample(colors.buttons),
+    id: 12,
+  },
+  {
+    label: "Suspenso",
+    src: "tan_tan",
+    color: _.sample(colors.buttons),
+    id: 13,
+  },
 ];
 
 export default audios;
