@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { breakpoints, colors, Utils } from "../../constants";
 
 const { readColor, neumorphism, calculateRem } = Utils;

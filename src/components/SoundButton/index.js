@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef } from "react";
 import _ from "lodash";
 import SVG from "react-inlinesvg";
 import PropTypes from "prop-types";
 import ReactHowler from "react-howler";
-import { Box, Label, Play, Share } from "./styles";
+import { Box, Label, Play } from "./styles";
 
 function SoundButton({ sound, label, color, handlePlay, playerId, playing }) {
   const [loading, setLoading] = useState(true);
